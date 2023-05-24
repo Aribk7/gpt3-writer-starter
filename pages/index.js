@@ -40,10 +40,12 @@ const callGenerateEndpoint = async () => {
         <title>Rumi Writer</title>
       </Head>
       <div className="container">
-        <div className="header">
-          <div className="header-title">
+      <div className="gg">
+      
+          <div className="header">
+            <div className="header-title">
             <h1>Rumi Writer</h1>
-          </div>
+            </div>
           <div className="header-subtitle">
             <h2>
               <Typewriter 
@@ -58,6 +60,7 @@ const callGenerateEndpoint = async () => {
             </h2>
           </div>
         </div>
+      </div>
     <div className="prompt-container">
         <textarea placeholder="what you want the poem to be about(ex.a cat on the moon)" className="prompt-box" value={userInput} onChange={onUserChangedText} />
         <div className="prompt-buttons">
@@ -75,6 +78,7 @@ const callGenerateEndpoint = async () => {
   <div className="output">
     <div className="output-header-container">
       <div className="output-header">
+      <div className="lil" />
       <Image className='small' src={BuildspaceLogo} alt="buildspace logo" />
         <h2></h2>
         <h3>Poem by Rumi</h3>
@@ -82,6 +86,7 @@ const callGenerateEndpoint = async () => {
     </div>
     <div className="output-content">
       <p>{apiOutput}</p>
+        <div className='gg'/>
     </div>
     
   </div>
@@ -102,7 +107,7 @@ const callGenerateEndpoint = async () => {
     </div>
 </div>
     
-  );
+  );x
 };
 
 export default Home;

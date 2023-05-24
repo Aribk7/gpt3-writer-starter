@@ -6,7 +6,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix = "write a poem in the style Rumi about ";
+const basePromptPrefix = "write a cuplate poem in the style of Rumi with the length of each line: 11 syllables, and  rhyme 6th syllable with 11th syllable about: ";
 const generateAction = async (req, res) => {
   // Run first prompt
   console.log(`API: ${basePromptPrefix}${req.body.userInput}`);
@@ -14,8 +14,8 @@ const generateAction = async (req, res) => {
   const baseCompletion = await openai.createCompletion({
     model: 'text-davinci-003',
     prompt: `${basePromptPrefix}${req.body.userInput}`,
-    temperature: 0.8,
-    max_tokens: 200,
+    temperature: 0.89,
+    max_tokens: 270,
   });
   
   const basePromptOutput = baseCompletion.data.choices.pop();
